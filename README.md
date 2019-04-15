@@ -8,3 +8,7 @@
 ## 프로젝트 소개
 > 
 > #### 메인 시스템
+![Alt text](/path/to/img.jpg "Optional title")
+
+## 프로젝트 시연
+[Youtube - 시연 영상](https://www.youtube.com/)
