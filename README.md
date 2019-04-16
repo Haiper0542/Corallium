@@ -13,7 +13,7 @@
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56102123-ac62c300-5f65-11e9-8b03-c39e0627c82c.png></img>
 ### 기술적 특징
 * **Flocking AI**
-'''c#
+```c#
 foreach(GameObject go in gos)
 {
    if(go != gameObject)
@@ -44,5 +44,5 @@ if(groupSize > 0)
       if (dir != Vector3.zero)
          transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), rotSpeed * Time.deltaTime);
 }
-'''
+```
 * **카드보드 VR/NonVR**
