@@ -13,4 +13,37 @@
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56102123-ac62c300-5f65-11e9-8b03-c39e0627c82c.png></img>
 ### 기술적 특징
 * **Flocking AI**
+'''
+foreach(GameObject go in gos)
+{
+   if(go != gameObject)
+   {
+      dist = Vector3.Distance(go.transform.position, transform.position);
+      if(dist <= neighborDist)
+      {
+         vcentre += go.transform.position;
+         groupSize++;
+
+         if(dist < 2.0f)
+            vavoid = vavoid + (transform.position - go.transform.position);
+
+         Flock anotherFlock = go.GetComponent<Flock>();
+         gSpeed = gSpeed + anotherFlock.speed;
+         }
+    }
+}
+
+if(groupSize > 0)
+{
+   vcentre = vcentre / groupSize + (goalPos - transform.position);
+   speed = gSpeed / groupSize;
+   if (!isJelly)
+      animator.speed = speed;
+
+      Vector3 dir = (vcentre + vavoid) - transform.position;
+
+      if (dir != Vector3.zero)
+         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), rotSpeed * Time.deltaTime);
+}
+        '''
 * **카드보드 VR/NonVR**
