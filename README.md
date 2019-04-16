@@ -11,3 +11,6 @@
 ### 게임 화면
 * **게임의 메인화면입니다. 인게임에서의 닉네임을 입력할 수 있습니다.**
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56102123-ac62c300-5f65-11e9-8b03-c39e0627c82c.png></img>
+### 기술적 특징
+* **Flocking AI**
+* **카드보드 VR/NonVR**
