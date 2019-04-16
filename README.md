@@ -45,5 +45,5 @@ if(groupSize > 0)
       if (dir != Vector3.zero)
          transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), rotSpeed * Time.deltaTime);
 }
-        '''
+'''
 * **카드보드 VR/NonVR**
