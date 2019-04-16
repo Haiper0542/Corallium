@@ -14,6 +14,7 @@
 ### 기술적 특징
 * **Flocking AI**
 '''
+
 foreach(GameObject go in gos)
 {
    if(go != gameObject)
