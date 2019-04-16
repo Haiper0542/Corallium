@@ -14,7 +14,7 @@
 ### 기술적 특징
 * **Flocking AI**
 '''
-
+c#
 foreach(GameObject go in gos)
 {
    if(go != gameObject)
@@ -33,7 +33,6 @@ foreach(GameObject go in gos)
          }
     }
 }
-
 if(groupSize > 0)
 {
    vcentre = vcentre / groupSize + (goalPos - transform.position);
