@@ -47,4 +47,3 @@ if(groupSize > 0)
          transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), rotSpeed * Time.deltaTime);
 }
 ```
-* **카드보드 VR/NonVR**
