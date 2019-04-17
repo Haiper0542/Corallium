@@ -16,7 +16,7 @@
 ```c#
 foreach(GameObject go in gos)
 {
-   if(go != gameObject)
+   if(go != gameObject) //자신 제외
    {
       dist = Vector3.Distance(go.transform.position, transform.position);
       if(dist <= neighborDist)
@@ -34,7 +34,9 @@ foreach(GameObject go in gos)
 }
 if(groupSize > 0)
 {
+   //중심 좌표
    vcentre = vcentre / groupSize + (goalPos - transform.position);
+   //평균 속도 계산
    speed = gSpeed / groupSize;
    if (!isJelly)
       animator.speed = speed;
