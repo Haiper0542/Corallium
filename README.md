@@ -20,7 +20,7 @@
 * **게임의 메인화면입니다. 인게임에서의 닉네임을 입력할 수 있습니다.**
 <img src="https://user-images.githubusercontent.com/40797534/56393843-79277900-6270-11e9-9cd2-be6b325d43e7.png" width="70%"></img>
 <img src="https://user-images.githubusercontent.com/40797534/56393844-79c00f80-6270-11e9-9222-6a939253ffe8.png" width="70%"></img>
-<img src="ttps://user-images.githubusercontent.com/40797534/56393842-79277900-6270-11e9-8f96-031d7cde08c4.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/40797534/56393842-79277900-6270-11e9-8f96-031d7cde08c4.png" width="70%"></img>
 
 ### 기술적 특징
 * **Flocking AI**
