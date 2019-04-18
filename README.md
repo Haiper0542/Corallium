@@ -18,7 +18,9 @@
       * 마인크래프트의 잔디처럼 sprite2개를 X자로 엇갈려놓음으로써 어느정도 자연스러운 해초를 구현하였습니다.
 ### 게임 화면
 * **게임의 메인화면입니다. 인게임에서의 닉네임을 입력할 수 있습니다.**
-<img width="70%" src=https://user-images.githubusercontent.com/40797534/56102123-ac62c300-5f65-11e9-8b03-c39e0627c82c.png></img>
+<img src="https://user-images.githubusercontent.com/40797534/56393497-9ad43080-626f-11e9-807e-8d3a50da0490.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/40797534/56393494-9a3b9a00-626f-11e9-9a68-8c23fb8ca994.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/40797534/56393496-9ad43080-626f-11e9-8546-f0ae1373f2d3.png" width="70%"></img>
 
 ### 기술적 특징
 * **Flocking AI**
