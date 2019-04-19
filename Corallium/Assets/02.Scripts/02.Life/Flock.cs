@@ -59,11 +59,13 @@ public class Flock : MonoBehaviour {
             {
                 transform.LookAt(new Vector3(Random.Range(-5, 5), 5, Random.Range(-5, 5)));
                 int size = 5;
+                //위치 재설정
                 newGoalPos = new Vector3(Random.Range(-size, size),
             Random.Range(0, size * 2),
             Random.Range(-size, size));
             }
 
+            //중심부를 향하게
             Vector3 dir = newGoalPos - transform.position;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir),
                 rotSpeed * Time.deltaTime);
@@ -104,7 +106,7 @@ public class Flock : MonoBehaviour {
         int groupSize = 0;
         foreach(GameObject go in gos)
         {
-            if(go != gameObject)
+            if(go != gameObject) //자신 제외
             {
                 dist = Vector3.Distance(go.transform.position, transform.position);
                 if(dist <= neighborDist)
@@ -125,7 +127,9 @@ public class Flock : MonoBehaviour {
 
         if(groupSize > 0)
         {
+            //중심 계산
             vcentre = vcentre / groupSize + (goalPos - transform.position);
+            //평균 속도 계산 -> 속도 맞추기
             speed = gSpeed / groupSize;
             if (!isJelly)
                 animator.speed = speed;
