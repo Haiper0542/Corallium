@@ -23,7 +23,7 @@
 <img src="https://user-images.githubusercontent.com/40797534/56393842-79277900-6270-11e9-8f96-031d7cde08c4.png" width="70%"></img>
 
 ## 코드
-* #### 에어로프연결 스크립트
+* #### 에어 로프 연결 스크립트
 ```C#
 public void AirFound()
 {
@@ -31,6 +31,7 @@ public void AirFound()
    List<GameObject> AirList = new List<GameObject>();
    for(int i = 0; i < AirList_.Length; i++)
    {
+      //주변에 에어 탱크와 연결되어있거나 에어 탱크일 경우 연결 준비
       if (AirList_[i].name == "AirTank" || AirList_[i].GetComponent<AirGen>().isGen)
       {
          AirList.Add(AirList_[i]);
@@ -38,19 +39,19 @@ public void AirFound()
    }
 
    GameObject AirPos = AirList[0];
-   float dist = Vector3.Distance(transform.position, AirList[0].transform.position);
+   float tankDist = Vector3.SqrMagnitude(transform.position - AirList[0].transform.position);
    foreach (GameObject obj in AirList)
    {
-      float dist_ = Vector3.Distance(transform.position, obj.transform.position);
-      if (dist_ < MaxAirRange && dist > dist_)
+      float dist = Vector3.SqrMagnitude(transform.position - obj.transform.position);
+      if (dist < MaxAirRange && tankDist > dist)
       {
-         dist = dist_;
-         AirPos = obj;
+         tankDist = dist;
+         airPos = obj;
       }
    }
    if (dist <= MaxAirRange)
-      AirTank = AirPos.transform.GetChild(0);
+      connectTank = airPos.transform.GetChild(0);
    else
-      AirTank = null;
+      connectTank = null;
 }
 ```
