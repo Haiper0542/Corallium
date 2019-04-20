@@ -21,3 +21,36 @@
 <img src="https://user-images.githubusercontent.com/40797534/56393843-79277900-6270-11e9-9cd2-be6b325d43e7.png" width="70%"></img>
 <img src="https://user-images.githubusercontent.com/40797534/56393844-79c00f80-6270-11e9-9222-6a939253ffe8.png" width="70%"></img>
 <img src="https://user-images.githubusercontent.com/40797534/56393842-79277900-6270-11e9-8f96-031d7cde08c4.png" width="70%"></img>
+
+## 코드
+* #### 에어로프연결 스크립트
+```C#
+public void AirFound()
+{
+   GameObject[] AirList_ = GameObject.FindGameObjectsWithTag("AirTank");
+   List<GameObject> AirList = new List<GameObject>();
+   for(int i = 0; i < AirList_.Length; i++)
+   {
+      if (AirList_[i].name == "AirTank" || AirList_[i].GetComponent<AirGen>().isGen)
+      {
+         AirList.Add(AirList_[i]);
+      }
+   }
+
+   GameObject AirPos = AirList[0];
+   float dist = Vector3.Distance(transform.position, AirList[0].transform.position);
+   foreach (GameObject obj in AirList)
+   {
+      float dist_ = Vector3.Distance(transform.position, obj.transform.position);
+      if (dist_ < MaxAirRange && dist > dist_)
+      {
+         dist = dist_;
+         AirPos = obj;
+      }
+   }
+   if (dist <= MaxAirRange)
+      AirTank = AirPos.transform.GetChild(0);
+   else
+      AirTank = null;
+}
+```
