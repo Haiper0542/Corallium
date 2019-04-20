@@ -43,6 +43,7 @@ public void AirFound()
    foreach (GameObject obj in AirList)
    {
       float dist = Vector3.SqrMagnitude(transform.position - obj.transform.position);
+      //연결 범위 안에 있으면서 현 거리보다 더 
       if (dist < MaxAirRange && tankDist > dist)
       {
          tankDist = dist;
